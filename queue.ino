@@ -8,7 +8,7 @@
 #endif
 
 // Settings
-static const uint8_t msg_queue_len = 5;
+static const uint8_t msg_queue_len = 5; // Maximum items that the queue can holdx
 
 // Globals (queue as a global variable so that all tasks can access it)
 // Creation of the queue
@@ -17,14 +17,14 @@ static QueueHandle_t msg_queue;
 
 // Tasks
 void printMessages(void *parameter){
-      int item;
+      int item; // where we store the value we read from the queue
 
       while(1){
         // See if there's a message in the queue (do not block)
         if(xQueueReceive(msg_queue, (void*)&item, 0) == pdTRUE){
           // the second parameter above is is the address of the local variable where the queue item will be copied to
           // The third parameter is the timeout in number of ticks
-          // The function returns pdTRUE is something was read from the queue or pdFALSE if not
+          // The function returns pdTRUE if thing was read from the queue or pdFALSE if not
           // If we got something we'll print it to the console
           Serial.println(item);        
           }
@@ -60,5 +60,14 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
+  static int num = 0;
+
+  // Try to add item to queue for 10 ticks, fail if queue is full
+  if(xQueueSend(msg_queue, (void*)&num, 10) != pdTRUE){
+    Serial.printn("Queue full");
+    }
+  num++;
+
+  vTaskDelay(1000 / portTICK_PERIOD_MS);
 
 }
