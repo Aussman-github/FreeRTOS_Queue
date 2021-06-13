@@ -1,4 +1,5 @@
 /* FreeRTOS queue demonstration */
+/* Author: Aussman IDDIR */
 
 #if CONFIG_FREERTOS_UNICORE
   static const BaseType_t app_cpu = 0;
