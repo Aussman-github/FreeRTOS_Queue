@@ -1,3 +1,5 @@
+/* FreeRTOS queue demonstration */
+
 #if CONFIG_FREERTOS_UNICORE
   static const BaseType_t app_cpu = 0;
 #else
