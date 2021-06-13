@@ -1,0 +1,61 @@
+#if CONFIG_FREERTOS_UNICORE
+  static const BaseType_t app_cpu = 0;
+#else
+  static const BaseType_t app_cpu = 1;
+#endif
+
+// Settings
+static const uint8_t msg_queue_len = 5;
+
+// Globals (queue as a global variable so that all tasks can access it)
+// Creation of the queue
+static QueueHandle_t msg_queue;
+
+
+// Tasks
+void printMessages(void *parameter){
+      int item;
+
+      while(1){
+        // See if there's a message in the queue (do not block)
+        if(xQueueReceive(msg_queue, (void*)&item, 0) == pdTRUE){
+          // the second parameter above is is the address of the local variable where the queue item will be copied to
+          // The third parameter is the timeout in number of ticks
+          // The function returns pdTRUE is something was read from the queue or pdFALSE if not
+          // If we got something we'll print it to the console
+          Serial.println(item);        
+          }
+          vTaskDelay(1000/portTICK_PERIOD_MS);
+        
+        }
+  
+  }
+
+
+
+void setup() {
+  // put your setup code here, to run once:
+  Serial.begin(115200);
+
+  vTaskDelay(1000/portTICK_PERIOD_MS);
+  Serial.println();
+  Serial.println("---FreeRTOS Queue Demo---");
+
+  // Create queue
+  msg_queue = xQueueCreate(msg_queue_len, sizeof(int));
+
+  // Start print task
+  xTaskCreatePinnedToCore(printMessages,
+                          "Print Messages",
+                          1024,
+                          NULL,
+                          1,
+                          NULL,
+                          app_cpu);
+  
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+
+}
