@@ -62,6 +62,7 @@ void setup() {
 void loop() {
   // put your main code here, to run repeatedly:
   static int num = 0;
+  static uint8_t num2 = 0;
 
   // Try to add item to queue for 10 ticks, fail if queue is full
   if(xQueueSend(msg_queue, (void*)&num, 10) != pdTRUE){
@@ -70,5 +71,8 @@ void loop() {
   num++;
 
   vTaskDelay(500 / portTICK_PERIOD_MS);
+
+  
+
 
 }
