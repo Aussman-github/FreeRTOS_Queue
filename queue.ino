@@ -61,7 +61,7 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
-  static int num = 0;
+  static int num = 1;
   static uint8_t num2 = 0;
   static uint8_t num3 = 0;
 
