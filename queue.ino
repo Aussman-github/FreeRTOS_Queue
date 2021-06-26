@@ -65,6 +65,8 @@ void loop() {
   static uint8_t num2 = 0;
   static uint8_t num3 = 0;
 
+  static uint8_t num4 = 0;
+
   // Try to add item to queue for 10 ticks, fail if queue is full
   if(xQueueSend(msg_queue, (void*)&num, 10) != pdTRUE){
     Serial.printn("Queue full");
