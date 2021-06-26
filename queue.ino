@@ -14,6 +14,7 @@ static const uint8_t msg_queue_len = 5; // Maximum items that the queue can hold
 // Creation of the queue
 static QueueHandle_t msg_queue;
 
+static QueueHandle_t msg_queueRx;
 
 // Tasks
 void printMessages(void *parameter){
