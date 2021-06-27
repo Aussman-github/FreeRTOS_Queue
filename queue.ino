@@ -22,6 +22,9 @@ static uint8_t num8 = 8;
 static char array1[] = {"BUGATTI"};
 static char array2[] = {"Veyron"};
 
+static char array3[] = {"Chiron"};
+static char array4[] = {"Chiron SuperSport"};
+
 // Globals (queue as a global variable so that all tasks can access it)
 // Creation of the queue
 static QueueHandle_t msg_queue;
