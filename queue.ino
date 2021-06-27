@@ -67,6 +67,7 @@ void loop() {
 
   static uint8_t num4 = 0;
   static uint8_t num5 = 2;
+  static uint8_t num6 = 3;
   
 
   // Try to add item to queue for 10 ticks, fail if queue is full
