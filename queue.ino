@@ -27,6 +27,7 @@ static char array2[] = {"Veyron"};
 
 static char array3[] = {"Chiron"};
 static char array4[] = {"Chiron SuperSport"};
+static char array5[]= {"la voiture noire"};
 
 // Globals (queue as a global variable so that all tasks can access it)
 // Creation of the queue
