@@ -9,6 +9,18 @@
 
 // Settings
 static const uint8_t msg_queue_len = 5; // Maximum items that the queue can holdx
+static int num = 1;
+static uint8_t num2 = 0;
+static uint8_t num3 = 0;
+
+static uint8_t num4 = 0;
+static uint8_t num5 = 2;
+static uint8_t num6 = 3;
+static uint8_t num7 = 4;
+static uint8_t num8 = 8;
+
+static char array1[] = {"BUGATTI"};
+static char array2[] = {"Veyron"};
 
 // Globals (queue as a global variable so that all tasks can access it)
 // Creation of the queue
@@ -61,19 +73,7 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
-  static int num = 1;
-  static uint8_t num2 = 0;
-  static uint8_t num3 = 0;
-
-  static uint8_t num4 = 0;
-  static uint8_t num5 = 2;
-  static uint8_t num6 = 3;
-  static uint8_t num7 = 4;
-static uint8_t num8 = 8;
-
-
-  static char array1[] = {"BUGATTI"};
-  static char array2[] = {"Veyron"};
+  
 
   // Try to add item to queue for 10 ticks, fail if queue is full
   if(xQueueSend(msg_queue, (void*)&num, 10) != pdTRUE){
