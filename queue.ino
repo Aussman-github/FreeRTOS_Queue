@@ -16,6 +16,8 @@ static QueueHandle_t msg_queue;
 
 static QueueHandle_t msg_queueRx;
 
+abcdefghijk
+
 // Tasks
 void printMessages(void *parameter){
       int item; // where we store the value we read from the queue
