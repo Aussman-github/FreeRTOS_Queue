@@ -29,6 +29,8 @@ static char array3[] = {"Chiron"};
 static char array4[] = {"Chiron SuperSport"};
 static char array5[]= {"La voiture noire"};
 
+static char array6[]= {"Centodieci"};
+
 // Globals (queue as a global variable so that all tasks can access it)
 // Creation of the queue
 static QueueHandle_t msg_queue;
