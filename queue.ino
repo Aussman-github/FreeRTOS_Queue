@@ -20,6 +20,7 @@ static uint8_t num7 = 4;
 static uint8_t num8 = 8;
 
 static uint32_t num9 = 33;
+static uint32_t num10 = 44;
 
 static char array1[] = {"BUGATTI"};
 static char array2[] = {"Veyron"};
