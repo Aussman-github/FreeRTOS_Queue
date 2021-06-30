@@ -32,6 +32,9 @@ static char array5[]= {"La voiture noire"};
 static char array6[]= {"Centodieci"};
 static char array7[] = {"Divo Bugatti"};
 
+static uint8_t *ptr1 = NULL;
+
+
 // Globals (queue as a global variable so that all tasks can access it)
 // Creation of the queue
 static QueueHandle_t msg_queue;
