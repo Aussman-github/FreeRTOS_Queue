@@ -44,6 +44,8 @@ static uint8_t *ptr2 = NULL;
 static uint8_t *ptr3 = NULL;
 
 
+static char array8[] = {"Hublot"};
+
 // Globals (queue as a global variable so that all tasks can access it)
 // Creation of the queue
 static QueueHandle_t msg_queue;
