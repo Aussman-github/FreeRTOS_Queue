@@ -7,6 +7,8 @@
   static const BaseType_t app_cpu = 1;
 #endif
 
+#define ENABLE_FREERTOS 1
+
 // Settings
 static const uint8_t msg_queue_len = 5; // Maximum items that the queue can holdx
 static int num = 1;
