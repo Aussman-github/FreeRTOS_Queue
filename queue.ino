@@ -34,6 +34,7 @@ static char array7[] = {"Divo Bugatti"};
 
 static uint8_t *ptr1 = NULL;
 
+static uint8_t *ptr2 = NULL;
 
 // Globals (queue as a global variable so that all tasks can access it)
 // Creation of the queue
