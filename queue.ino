@@ -41,6 +41,8 @@ typedef struct watch{
   }watch;
 
 static uint8_t *ptr2 = NULL;
+static uint8_t *ptr3 = NULL;
+
 
 // Globals (queue as a global variable so that all tasks can access it)
 // Creation of the queue
