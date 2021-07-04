@@ -9,6 +9,7 @@
 
 #define ENABLE_FREERTOS 1
 #define ENABLE_UCI 1
+#define TXPOWER 22
 
 
 // Settings
