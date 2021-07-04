@@ -5,7 +5,7 @@
 
 TaskHandle_t Task1Handle = NULL;
 TaskHandle_t Task2Handle = NULL;
-
+TaskHandle_t Task3Handle = NULL;
 
 void Task1(void *p) {
 	uint8_t count = 0;
