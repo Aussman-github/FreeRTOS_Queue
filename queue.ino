@@ -9,8 +9,11 @@
 
 #define ENABLE_FREERTOS 1
 #define ENABLE_UCI 1
+
 #define ENABLE_RANGING 1
 #define UWB_CFG_IDX 1
+
+#define TXPOWER 22
 
 // Settings
 static const uint8_t msg_queue_len = 5; // Maximum items that the queue can holdx
