@@ -27,6 +27,7 @@ void Task2(void *p) {
 
 }
 
+void functionnorelock(void);
 
 
 
@@ -60,5 +61,10 @@ int main(void) {
 	
 	}
 
-	
 }
+
+
+
+void functionnorelock(void){
+  
+  }
