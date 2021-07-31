@@ -19,6 +19,11 @@
 #define TXPOWER 22
 #define SETCHAN 9
 
+#define FRONT 1
+#define LEFT 2
+#define BACK 3
+#define RIGHT 4
+
 
 /* --- Local functions --- */
 void setUwbCfg(uint8_t UwbCfgIdx);
