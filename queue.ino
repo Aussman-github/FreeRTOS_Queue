@@ -16,6 +16,11 @@
 #define TXPOWER 22
 #define SETCHAN 9
 
+#define FRONT 1
+#define LEFT 2
+#define BACK 3
+#define RIGHT 4
+
 
 // Settings
 static const uint8_t msg_queue_len = 5; // Maximum items that the queue can holdx
