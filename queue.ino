@@ -1,6 +1,9 @@
 /* FreeRTOS queue demonstration */
 /* Author: Aussman IDDIR */
 
+#define dbgchkptr(x) ASSERT(x)
+
+
 #if CONFIG_FREERTOS_UNICORE
   static const BaseType_t app_cpu = 0;
 #else
@@ -43,7 +46,7 @@ static char array5[] = {"Chiron SuperSport"};
 static char array6[]= {"La voiture noire"};
 
 static char array7[]= {"Centodieci"};
-static char array8[] = {"Divo Bugatti"};
+static char array8[] = {"Divo"};
 
 static uint8_t *ptr1 = NULL;
 
