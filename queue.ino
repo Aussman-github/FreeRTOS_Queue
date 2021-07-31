@@ -19,7 +19,7 @@
 
 // Settings
 static const uint8_t msg_queue_len = 5; // Maximum items that the queue can holdx
-static int num = 1;
+static uint8_t num = 1;
 static uint8_t num2 = 0;
 static uint8_t num3 = 0;
 
@@ -32,16 +32,18 @@ static uint8_t num8 = 8;
 static uint32_t num9 = 33;
 static uint32_t num10 = 44;
 static uint32_t num11 = 0;
+static uint32_t num12 = 0xFF;
 
-static char array1[] = {"BUGATTI"};
+static char array1[] = {"Bugatti"};
 static char array2[] = {"Veyron"};
+static char array3[]= {"Molsheim"};
 
-static char array3[] = {"Chiron"};
-static char array4[] = {"Chiron SuperSport"};
-static char array5[]= {"La voiture noire"};
+static char array4[] = {"Chiron"};
+static char array5[] = {"Chiron SuperSport"};
+static char array6[]= {"La voiture noire"};
 
-static char array6[]= {"Centodieci"};
-static char array7[] = {"Divo Bugatti"};
+static char array7[]= {"Centodieci"};
+static char array8[] = {"Divo Bugatti"};
 
 static uint8_t *ptr1 = NULL;
 
