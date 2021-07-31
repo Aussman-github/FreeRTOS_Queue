@@ -17,6 +17,10 @@
 #define SETCHAN 9
 
 
+/* --- Local functions --- */
+void setUwbCfg(uint8_t UwbCfgIdx);
+
+
 // Settings
 static const uint8_t msg_queue_len = 5; // Maximum items that the queue can holdx
 static uint8_t num = 1;
@@ -120,7 +124,12 @@ void loop() {
 
   vTaskDelay(500 / portTICK_PERIOD_MS);
 
-  
-
-
 }
+
+
+void setUwbCfg(uint8_t UwbCfgIdx){
+  
+  
+  
+  
+  }
